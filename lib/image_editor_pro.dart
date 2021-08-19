@@ -255,7 +255,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
         key: scaf,
         appBar: AppBar(
           actions: <Widget>[
-            Icon(FontAwesomeIcons.boxes).xIconButton(onPressed: () {
+            /*Icon(FontAwesomeIcons.boxes).xIconButton(onPressed: () {
               showCupertinoDialog(
                   context: context,
                   builder: (context) {
@@ -299,15 +299,15 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                       ),
                     );
                   });
-            }),
+            }),*/
             Icon(Icons.clear).xIconButton(onPressed: () {
               _controller.points.clear();
               setState(() {});
             }),
-            Icon(Icons.camera_alt).xIconButton(onPressed: () {
+            /*Icon(Icons.camera_alt).xIconButton(onPressed: () {
               bottomsheets();
-            }),
-            'Save'.text().xFlatButton(
+            }),*/
+            'Salvar'.text().xFlatButton(
                 primary: Colors.white,
                 onPressed: () {
                   screenshotController.capture(pixelRatio: widget.pixelRatio ?? 1.5).then((binaryIntList) async {
@@ -362,7 +362,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                         },
                       );
                     },
-                    title: 'Brush',
+                    title: 'Pincél',
                   ),
                   BottomBarContainer(
                     colors: widget.bottomBarColor,
@@ -381,7 +381,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                         howmuchwidgetis++;
                       }
                     },
-                    title: 'Text',
+                    title: 'Texto',
                   ),
                   BottomBarContainer(
                     colors: widget.bottomBarColor,
@@ -393,7 +393,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                     },
                     title: 'Flip',
                   ),
-                  BottomBarContainer(
+                  /*BottomBarContainer(
                     colors: widget.bottomBarColor,
                     icons: Icons.rotate_left,
                     ontap: () {
@@ -412,7 +412,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                       });
                     },
                     title: 'Rotate right',
-                  ),
+                  ),*/
                   BottomBarContainer(
                     colors: widget.bottomBarColor,
                     icons: Icons.blur_on,
