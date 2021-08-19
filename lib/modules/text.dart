@@ -22,7 +22,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
             decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.all(10),
-              hintText: 'Insert Your Message',
+              hintText: 'Insira sua mensagem',
               hintStyle: TextStyle(color: Colors.white),
               alignLabelWithHint: true,
             ),
@@ -37,7 +37,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
           ).toContainer(height: xheight(context) / 2.2),
           xColumnCC.list([
             //   20.0.sizedHeight(),
-            'Slider Color'.text(),
+            'Cor da letra'.text(),
             //   10.0.sizedHeight(),
             xRowCC.list([
               BarColorPicker(
@@ -50,12 +50,12 @@ class _TextEditorImageState extends State<TextEditorImage> {
                       currentColor = Color(value);
                     });
                   }).xExpanded(),
-              'Reset'.text().xFlatButton(onPressed: () {})
+              /*'Reset'.text().xFlatButton(onPressed: () {})*/
             ]),
             //   20.0.sizedHeight(),
             'Slider White Black Color'.text(),
             //   10.0.sizedHeight(),
-            xRowCC.list([
+            /*xRowCC.list([
               BarColorPicker(
                   width: 300,
                   thumbColor: Colors.white,
@@ -88,7 +88,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
                       slider = v;
                     });
                   }),
-            ]).toContainer(color: Colors.black)
+            ]).toContainer(color: Colors.black)*/
           ]).xContainer(color: Colors.white),
         ])
         .xSingleChildScroolView()
@@ -147,7 +147,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
                     }),
             ],
           ),
-          bottomNavigationBar: 'Add Text'
+          bottomNavigationBar: 'Adicionar texto'
               .xTextColorWhite(
                 fontWeight: FontWeight.bold,
                 fontsize: 22,

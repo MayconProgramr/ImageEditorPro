@@ -343,7 +343,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                         context: context,
                         builder: (context) {
                           return AlertDialog(
-                            title: 'Pick a color!'.text(),
+                            title: 'Escolha uma cor!'.text(),
                             content: ColorPicker(
                               pickerColor: pickerColor,
                               onColorChanged: changeColor,
@@ -351,7 +351,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                               pickerAreaHeightPercent: 0.8,
                             ).xSingleChildScroolView(),
                             actions: <Widget>[
-                              'Got it'.text().xFlatButton(
+                              'Ok'.text().xFlatButton(
                                 onPressed: () {
                                   setState(() => currentColor = pickerColor);
                                   back(context);
@@ -412,7 +412,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                       });
                     },
                     title: 'Rotate right',
-                  ),*/
+                  ),
                   BottomBarContainer(
                     colors: widget.bottomBarColor,
                     icons: Icons.blur_on,
@@ -517,19 +517,19 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                       );
                     },
                     title: 'Blur',
-                  ),
+                  ),*/
                   BottomBarContainer(
                     colors: widget.bottomBarColor,
                     icons: FontAwesomeIcons.eraser,
                     ontap: () {
                       _controller.clear();
-                      //  type.clear();
-                      // // fontsize.clear();
-                      //  offsets.clear();
-                      // // multiwidget.clear();
+                      type.clear();
+                      //fontsize.clear();
+                      offsets.clear();
+                      //multiwidget.clear();
                       howmuchwidgetis = 0;
                     },
-                    title: 'Eraser',
+                    title: 'Apagar',
                   ),
                   BottomBarContainer(
                     colors: widget.bottomBarColor,
@@ -747,7 +747,7 @@ class _SignatState extends State<Signat> {
   @override
   void initState() {
     super.initState();
-    _controller.addListener(() => print('Value changed'));
+    //_controller.addListener(() => print('Value changed'));
   }
 
   @override

@@ -26,7 +26,7 @@ class _SlidersState extends State<Sliders> {
     return xColumnCC.list(
       [
         10.0.sizedHeight(),
-        'Size Adjust'.toUpperCase().xTextColorWhite().toCenter(),
+        'Ajuste de tamanho'.toUpperCase().xTextColorWhite().toCenter(),
         Divider(
 
             // height: 1,
@@ -52,7 +52,7 @@ class _SlidersState extends State<Sliders> {
         10.0.sizedHeight(),
         xColumn.list([
           20.0.sizedHeight(),
-          'Slider Color'.text(),
+          'Cor da letra'.text(),
           //   10.0.sizedHeight(),
           xRowCC.list([
             BarColorPicker(
@@ -65,7 +65,7 @@ class _SlidersState extends State<Sliders> {
                     widgetJson[widget.index]['color'] = Color(value);
                   });
                 }).xExpanded(),
-            'Reset'.text().xFlatButton(onPressed: () {})
+            //'Reset'.text().xFlatButton(onPressed: () {})
           ]),
           //   20.0.sizedHeight(),
           'Slider White Black Color'.text(),
@@ -81,12 +81,12 @@ class _SlidersState extends State<Sliders> {
                     widgetJson[widget.index]['color'] = Color(value);
                   });
                 }).xExpanded(),
-            'Reset'.text().xFlatButton(onPressed: () {})
+            //'Reset'.text().xFlatButton(onPressed: () {})
           ]),
         ]).xContainer(color: Colors.white, rounded: 10),
         10.0.sizedHeight(),
         xRow.list([
-          'Remove'
+          'Remover'
               .text()
               .xFlatButton(
                   color: Colors.white,
