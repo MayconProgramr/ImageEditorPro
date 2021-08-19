@@ -96,7 +96,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
         .xScaffold(
           backgroundColor: Colors.black,
           appBar: AppBar(
-            backgroundColor: Colors.black,
+            /*backgroundColor: Colors.black,
             actions: <Widget>[
               align == TextAlign.left
                   ? FontAwesomeIcons.alignLeft
@@ -145,10 +145,10 @@ class _TextEditorImageState extends State<TextEditorImage> {
                         align = TextAlign.right;
                       });
                     }),
-            ],
+            ],*/
           ),
           bottomNavigationBar: 'Adicionar texto'
-              .xTextColorWhite(
+              .xTextColorBlack(
                 fontWeight: FontWeight.bold,
                 fontsize: 22,
               )
@@ -161,13 +161,13 @@ class _TextEditorImageState extends State<TextEditorImage> {
                     'align': align
                   });
                 },
-                color: Colors.black,
+                color: Colors.white,
                 padding: EdgeInsets.all(15),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
               )
               .xContainer(
-                color: Colors.white,
+                color: Colors.black
               ),
         );
   }

@@ -86,7 +86,7 @@ class _SlidersState extends State<Sliders> {
         ]).xContainer(color: Colors.white, rounded: 10),
         10.0.sizedHeight(),
         xRow.list([
-          'Remover'
+          'Remover texto'
               .text()
               .xFlatButton(
                   color: Colors.white,
