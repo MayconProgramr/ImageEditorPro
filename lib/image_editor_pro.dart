@@ -42,6 +42,7 @@ class ImageEditorPro extends StatefulWidget {
   final Directory pathSave;
   final File defaultImage;
   final double pixelRatio;
+  final String nameSave;
 
   ImageEditorPro({
     this.appBarColor,
@@ -49,6 +50,7 @@ class ImageEditorPro extends StatefulWidget {
     this.pathSave,
     this.defaultImage,
     this.pixelRatio,
+    this.nameSave,
   });
 
   @override
@@ -312,8 +314,9 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                     //print("Capture Done");
 
                     final paths = widget.pathSave ?? await getTemporaryDirectory();
-
-                    final file = await File('${paths.path}/' + DateTime.now().toString() + '.jpg').create();
+                    final name = widget.nameSave ?? DateTime.now().toString();
+                    
+                    final file = await File('${paths.path}/' + name.toString() + '.jpg').create();
                     file.writeAsBytesSync(binaryIntList);
                     Navigator.pop(context, file);
                   }).catchError((onError) {
