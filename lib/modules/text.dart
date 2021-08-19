@@ -38,7 +38,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
           xColumnCC.list([
             //   20.0.sizedHeight(),
             'Cor da letra'.text(),
-            //   10.0.sizedHeight(),
+            //   10.0.sizedHeight(),        
             xRowCC.list([
               BarColorPicker(
                   width: 300,
@@ -52,8 +52,8 @@ class _TextEditorImageState extends State<TextEditorImage> {
                   }).xExpanded(),
               /*'Reset'.text().xFlatButton(onPressed: () {})*/
             ]),
-            //   20.0.sizedHeight(),
-            'Slider White Black Color'.text(),
+            20.0.sizedHeight(),
+            //'Slider White Black Color'.text(),
             //   10.0.sizedHeight(),
             /*xRowCC.list([
               BarColorPicker(
@@ -89,15 +89,15 @@ class _TextEditorImageState extends State<TextEditorImage> {
                     });
                   }),
             ]).toContainer(color: Colors.black)*/
-          ]).xContainer(color: Colors.white),
+          ]).xContainer(color: Colors.white).xCenter(),
         ])
         .xSingleChildScroolView()
         .xCenter()
         .xScaffold(
           backgroundColor: Colors.black,
           appBar: AppBar(
-            /*backgroundColor: Colors.black,
-            actions: <Widget>[
+            backgroundColor: Colors.black,
+            /*actions: <Widget>[
               align == TextAlign.left
                   ? FontAwesomeIcons.alignLeft
                       .xListTileIcon(

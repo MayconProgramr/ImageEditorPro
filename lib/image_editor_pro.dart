@@ -533,6 +533,28 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                   ),
                   BottomBarContainer(
                     colors: widget.bottomBarColor,
+                    icons: FontAwesomeIcons.smile,
+                    ontap: () {
+                      var getemojis = showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Emojies();
+                          });
+                      getemojis.then((value) {
+                        if (value['name'] != null) {
+                          type.add(1);
+                          widgetJson.add(value);
+                          //    fontsize.add(20);
+                          offsets.add(Offset.zero);
+                          //  multiwidget.add(value);
+                          howmuchwidgetis++;
+                        }
+                      });
+                    },
+                    title: 'Emoji',
+                  ),
+                  /*BottomBarContainer(
+                    colors: widget.bottomBarColor,
                     icons: Icons.photo,
                     ontap: () {
                       showModalBottomSheet(
@@ -628,29 +650,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                           });
                     },
                     title: 'Filter',
-                  ),
-                  BottomBarContainer(
-                    colors: widget.bottomBarColor,
-                    icons: FontAwesomeIcons.smile,
-                    ontap: () {
-                      var getemojis = showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Emojies();
-                          });
-                      getemojis.then((value) {
-                        if (value['name'] != null) {
-                          type.add(1);
-                          widgetJson.add(value);
-                          //    fontsize.add(20);
-                          offsets.add(Offset.zero);
-                          //  multiwidget.add(value);
-                          howmuchwidgetis++;
-                        }
-                      });
-                    },
-                    title: 'Emoji',
-                  ),
+                  ), */                 
                 ],
               ).xContainer(
                 padding: EdgeInsets.all(0.0),
