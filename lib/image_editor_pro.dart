@@ -517,20 +517,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                       );
                     },
                     title: 'Blur',
-                  ),*/
-                  BottomBarContainer(
-                    colors: widget.bottomBarColor,
-                    icons: FontAwesomeIcons.eraser,
-                    ontap: () {
-                      _controller.clear();
-                      type.clear();
-                      //fontsize.clear();
-                      offsets.clear();
-                      //multiwidget.clear();
-                      howmuchwidgetis = 0;
-                    },
-                    title: 'Apagar',
-                  ),
+                  ),*/                
                   BottomBarContainer(
                     colors: widget.bottomBarColor,
                     icons: FontAwesomeIcons.smile,
@@ -552,6 +539,19 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                       });
                     },
                     title: 'Emoji',
+                  ),
+                  BottomBarContainer(
+                    colors: widget.bottomBarColor,
+                    icons: FontAwesomeIcons.eraser,
+                    ontap: () {
+                      _controller.clear();
+                      type.clear();
+                      //fontsize.clear();
+                      offsets.clear();
+                      //multiwidget.clear();
+                      howmuchwidgetis = 0;
+                    },
+                    title: 'Apagar',
                   ),
                   /*BottomBarContainer(
                     colors: widget.bottomBarColor,
