@@ -549,6 +549,10 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                       //fontsize.clear();
                       //offsets.clear();
                       //multiwidget.clear();
+                      //timeprediction.cancel();
+                      widgetJson.clear();
+                      heightcontroler.clear();
+                      widthcontroler.clear();
                       howmuchwidgetis = 0;
                     },
                     title: 'Apagar',

@@ -12,7 +12,7 @@ class _EmojiesState extends State<Emojies> {
   @override
   Widget build(BuildContext context) {
     return xColumn.list([
-      xRowCC.list(['Select Emoji'.text()]).xap(value: 20),
+      xRowCC.list(['Selecione um Emoji'.text()]).xap(value: 20),
       Divider(
         height: 1,
       ),
