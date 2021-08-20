@@ -545,9 +545,9 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                     icons: FontAwesomeIcons.eraser,
                     ontap: () {
                       _controller.clear();
-                      type.clear();
+                      //type.clear();
                       //fontsize.clear();
-                      offsets.clear();
+                      //offsets.clear();
                       //multiwidget.clear();
                       howmuchwidgetis = 0;
                     },
