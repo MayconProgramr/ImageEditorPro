@@ -300,11 +300,11 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                     );
                   });
             }),*/
-            Icon(Icons.clear).xIconButton(onPressed: () {
+            /*Icon(Icons.clear).xIconButton(onPressed: () {
               _controller.points.clear();
               setState(() {});
             }),
-            /*Icon(Icons.camera_alt).xIconButton(onPressed: () {
+            Icon(Icons.camera_alt).xIconButton(onPressed: () {
               bottomsheets();
             }),*/
             'Salvar'.text().xFlatButton(
