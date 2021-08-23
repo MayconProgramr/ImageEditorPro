@@ -245,10 +245,10 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                   )
                 ],
               )).toContainer(
-            margin: EdgeInsets.all(20),
-            color: Colors.white,
+            //margin: EdgeInsets.all(20),
+            color: colorValue.withOpacity(opacityValue),
             width: width.toDouble(),
-            //height: height.toDouble(),
+            height: height.toDouble(),
           ),
         ),
       ),
