@@ -157,15 +157,15 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                             child: _image.path.decorationIAToCover().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
-                                width: width.toDouble(),
-                                height: height.toDouble(),
+                                width: 50,
+                                height: 50,
                                 child: BackdropFilter(
                                   filter: ImageFilter.blur(
                                     sigmaX: blurValue,
                                     sigmaY: blurValue,
                                   ),
                                   child: Container(
-                                    color: Colors.red,//colorValue.withOpacity(opacityValue),
+                                    color: colorValue.withOpacity(opacityValue),
                                   ),
                                 )),
                           ),)
