@@ -155,8 +155,8 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                             child: _image.path.decorationIFToCover().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
-                                width: width.toDouble(),
-                                height: height.toDouble(),
+                                //width: width.toDouble(),
+                                //height: height.toDouble(),
                                 child: BackdropFilter(
                                   filter: ImageFilter.blur(
                                     sigmaX: blurValue,
