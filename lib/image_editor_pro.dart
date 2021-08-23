@@ -154,7 +154,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                             child: ClipRect(
                             // <-- clips to the 200x200 [Container] below
 
-                            child: _image.path.decorationIFToFitHeight().xContainer(
+                            child: _image.path.decorationIFToCover().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
                                 width: width.toDouble(),
@@ -729,26 +729,6 @@ class _ImageEditorProState extends State<ImageEditorPro> {
   }
 
   Future<void> loadImage(File imageFile) async {
-    
-    /*Completer<Size> completer = Completer();
-    Image image = Image.file(imageFile);
-    image.image.resolve(ImageConfiguration()).addListener(
-      ImageStreamListener(
-        (ImageInfo image, bool synchronousCall) {
-          var myImage = image.image;
-          setState(() {
-            height = myImage.height;
-            width = myImage.width;
-            _image = imageFile;
-            _controller.clear();
-          });
-          Size size = Size(myImage.width.toDouble(), myImage.height.toDouble());
-          completer.complete(size);
-          print("width: ${myImage.width}  height:${myImage.height}");
-        },
-      ),
-    );
-    //return completer.future;*/
 
     final decodedImage = await decodeImageFromList(imageFile.readAsBytesSync());
     setState(() {
