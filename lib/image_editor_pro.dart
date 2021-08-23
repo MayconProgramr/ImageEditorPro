@@ -145,7 +145,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
               key: globalKey,
               child: xStack.list(
                 [
-                  _image != null
+                  _image == null
                       ? Transform(
                           alignment: Alignment.center,
                           transform: Matrix4.rotationY(flipValue),
@@ -157,8 +157,8 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                             child: _image.path.decorationIAToCover().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
-                                width: 50,
-                                height: 50,
+                                width: width.toDouble(),
+                                height: height.toDouble(),
                                 child: BackdropFilter(
                                   filter: ImageFilter.blur(
                                     sigmaX: blurValue,
