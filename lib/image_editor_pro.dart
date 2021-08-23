@@ -732,7 +732,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
     final decodedImage = await decodeImageFromList(imageFile.readAsBytesSync());
     setState(() {
       height = decodedImage.height;
-      width = decodedImage.width;
+      width = decodedImage.width - 100;
       _image = imageFile;
       _controller.clear();
     });
