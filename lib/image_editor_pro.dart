@@ -149,7 +149,9 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                       ? Transform(
                           alignment: Alignment.center,
                           transform: Matrix4.rotationY(flipValue),
-                          child: ClipRect(
+                          child: FittedBox(
+                            fit: BoxFit.fill,
+                            child: ClipRect(
                             // <-- clips to the 200x200 [Container] below
 
                             child: _image.path.decorationIFToFitHeight().xContainer(
@@ -166,7 +168,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                                     color: colorValue.withOpacity(opacityValue),
                                   ),
                                 )),
-                          ),
+                          ),)
                         )
 
                       //  BackdropFilter(
