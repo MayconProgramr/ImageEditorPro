@@ -25,8 +25,8 @@ import 'modules/colors_picker.dart'; // import this
 
 TextEditingController heightcontroler = TextEditingController();
 TextEditingController widthcontroler = TextEditingController();
-var width = 300;
-var height = 300;
+var width = 100;
+var height = 100;
 List<Map> widgetJson = [];
 //List fontsize = [];
 //List<Color> colorList = [];
