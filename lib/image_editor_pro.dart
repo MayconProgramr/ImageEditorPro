@@ -158,17 +158,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
                                 width: width.toDouble(),
-                                height: height.toDouble(),                                
-                                child: BackdropFilter(
-                           filter: ImageFilter.blur(
-                               sigmaX: 10.0, sigmaY: 10.0, tileMode: TileMode.clamp),
-                           child: Image.file(
-                           _image,
-                             height: height.toDouble(),
-                             width: width.toDouble(),
-                             fit: BoxFit.cover,
-                           ),
-                         )),
+                                height: height.toDouble(),                                ),
                           ),)
                         )
 
