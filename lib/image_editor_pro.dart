@@ -151,13 +151,13 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                           transform: Matrix4.rotationY(flipValue),
                           child: FittedBox(
                             fit: BoxFit.cover,
-                            child: ClipRect(                            
+                            child: ClipRect(
                             // <-- clips to the 200x200 [Container] below
 
                             child: _image.path.decorationIAToCover().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
-                                //width: width.toDouble(),
+                                width: width.toDouble(),
                                 //height: height.toDouble(),
                                 child: BackdropFilter(
                                   filter: ImageFilter.blur(
