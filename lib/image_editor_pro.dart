@@ -25,8 +25,8 @@ import 'modules/colors_picker.dart'; // import this
 
 TextEditingController heightcontroler = TextEditingController();
 TextEditingController widthcontroler = TextEditingController();
-var width = 100;
-var height = 100;
+var width = 300;
+var height = 300;
 List<Map> widgetJson = [];
 //List fontsize = [];
 //List<Color> colorList = [];
@@ -729,13 +729,34 @@ class _ImageEditorProState extends State<ImageEditorPro> {
   }
 
   Future<void> loadImage(File imageFile) async {
-    final decodedImage = await decodeImageFromList(imageFile.readAsBytesSync());
+    
+    Completer<Size> completer = Completer();
+    Image image = Image.file(imageFile);
+    image.image.resolve(ImageConfiguration()).addListener(
+      ImageStreamListener(
+        (ImageInfo image, bool synchronousCall) {
+          var myImage = image.image;
+          setState(() {
+            height = myImage.height;
+            width = myImage.width;
+            _image = imageFile;
+            _controller.clear();
+          });
+          Size size = Size(myImage.width.toDouble(), myImage.height.toDouble());
+          completer.complete(size);
+          print("width: ${myImage.width}  height:${myImage.height}");
+        },
+      ),
+    );
+    //return completer.future;
+
+    /*final decodedImage = await decodeImageFromList(imageFile.readAsBytesSync());
     setState(() {
       height = decodedImage.height;
-      width = decodedImage.width - 100;
+      width = decodedImage.width;
       _image = imageFile;
       _controller.clear();
-    });
+    });*/
   }
 
   void _closeModal(void value) {
