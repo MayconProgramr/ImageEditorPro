@@ -152,11 +152,11 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                           child: ClipRect(
                             // <-- clips to the 200x200 [Container] below
 
-                            child: _image.path.decorationIFToCover().xContainer(
+                            child: _image.path.decorationINToCover().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
-                                //width: width.toDouble(),
-                                //height: height.toDouble(),
+                                width: width.toDouble(),
+                                height: height.toDouble(),
                                 child: BackdropFilter(
                                   filter: ImageFilter.blur(
                                     sigmaX: blurValue,
