@@ -246,7 +246,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                 ],
               )).toContainer(
             margin: EdgeInsets.all(20),
-            color: colorValue.withOpacity(opacityValue),
+            color: Colors.white,//colorValue.withOpacity(opacityValue),
             width: width.toDouble(),
             height: height.toDouble(),
           ),
@@ -731,7 +731,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
   Future<void> loadImage(File imageFile) async {
     final decodedImage = await decodeImageFromList(imageFile.readAsBytesSync());
     setState(() {
-      height = decodedImage.height;
+      height = (decodedImage.height -30);
       width = decodedImage.width;
       _image = imageFile;
       _controller.clear();
