@@ -731,7 +731,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
   Future<void> loadImage(File imageFile) async {
     final decodedImage = await decodeImageFromList(imageFile.readAsBytesSync());
     setState(() {
-      height = (decodedImage.height -30);
+      height = decodedImage.height;
       width = decodedImage.width;
       _image = imageFile;
       _controller.clear();
