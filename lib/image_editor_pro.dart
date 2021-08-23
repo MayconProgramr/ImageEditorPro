@@ -150,7 +150,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                           alignment: Alignment.center,
                           transform: Matrix4.rotationY(flipValue),
                           child: FittedBox(
-                            fit: BoxFit.fill,
+                            fit: BoxFit.cover,
                             child: ClipRect(
                             // <-- clips to the 200x200 [Container] below
 
