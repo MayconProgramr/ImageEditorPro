@@ -248,7 +248,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
             margin: EdgeInsets.all(20),
             color: Colors.white,
             width: width.toDouble(),
-            height: height.toDouble(),
+            //height: height.toDouble(),
           ),
         ),
       ),
