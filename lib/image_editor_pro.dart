@@ -730,7 +730,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
 
   Future<void> loadImage(File imageFile) async {
     
-    Completer<Size> completer = Completer();
+    /*Completer<Size> completer = Completer();
     Image image = Image.file(imageFile);
     image.image.resolve(ImageConfiguration()).addListener(
       ImageStreamListener(
@@ -748,15 +748,16 @@ class _ImageEditorProState extends State<ImageEditorPro> {
         },
       ),
     );
-    //return completer.future;
+    //return completer.future;*/
 
-    /*final decodedImage = await decodeImageFromList(imageFile.readAsBytesSync());
+    final decodedImage = await decodeImageFromList(imageFile.readAsBytesSync());
     setState(() {
       height = decodedImage.height;
       width = decodedImage.width;
       _image = imageFile;
       _controller.clear();
-    });*/
+      print("width: ${decodedImage.width}  height:${decodedImage.height}");
+    });
   }
 
   void _closeModal(void value) {
