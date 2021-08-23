@@ -145,7 +145,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
               key: globalKey,
               child: xStack.list(
                 [
-                  _image == null
+                  _image != null
                       ? Transform(
                           alignment: Alignment.center,
                           transform: Matrix4.rotationY(flipValue),
@@ -154,7 +154,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                             child: ClipRect(
                             // <-- clips to the 200x200 [Container] below
 
-                            child: _image.path.decorationIAToCover().xContainer(
+                            child: _image.path.decorationIFToFitHeight().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
                                 width: width.toDouble(),
@@ -246,7 +246,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                 ],
               )).toContainer(
             //margin: EdgeInsets.all(20),
-            color: colorValue.withOpacity(opacityValue),
+            color: Colors.white,
             width: width.toDouble(),
             height: height.toDouble(),
           ),
